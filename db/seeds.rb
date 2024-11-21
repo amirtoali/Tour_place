@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 20.times do
-	Place.create(
+	palace= Place.create(
 		name: Faker::Address.unique.street_name,
 		description:Faker::Lorem.paragraph,
 		state: Faker::Address.state,
@@ -15,4 +15,7 @@
 		langitude:  Faker::Address.longitude,
 		latitude:  Faker::Address.latitude
 		)
+   5.times do 
+   	palace.images.create(url:"https://chittore.jpg")
+   end
 end
