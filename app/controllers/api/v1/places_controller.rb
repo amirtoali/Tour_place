@@ -5,7 +5,7 @@ class Api::V1::PlacesController < ApplicationController
 		render json: @places
 	end
 	def show 
-	 render json: @place
+	 render json: @place.as_json(include: { images:{only: %i[id url]}})
 	end
 	def update
 	 if @place.update(place_params)
