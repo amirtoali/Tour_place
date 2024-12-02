@@ -47,4 +47,5 @@ group :development do
 end
 gem "byebug"
 gem "faker"
+gem "devise-jwt"
 

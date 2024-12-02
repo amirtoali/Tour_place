@@ -31,6 +31,6 @@ class Api::V1::PlacesController < ApplicationController
   end
 
 	def place_params
-		params.require(:place).permit(:name, :description, :image_url, :langitude, :latitude, :state, :city, :country)
+		params.require(:place).permit(:name, :description, :image_url, :langitude, :latitude, :state, :city, :country, images_attributes: [:id, :url])
 	end
 end
